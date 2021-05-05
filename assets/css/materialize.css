@@ -1,0 +1,200 @@
+.nav-wrapper {
+    color: rgb(150, 150, 150);
+    background-color: rgb(48, 8, 8);
+}
+
+nav ul a {
+    color: rgb(150, 150, 150);
+}
+
+.preloader-wrapper {
+    margin: 2% auto;
+    display: block;
+}
+
+input[type='text']:not(.browser-default),
+input[type='password']:not(.browser-default),
+input[type='email']:not(.browser-default),
+input[type='url']:not(.browser-default),
+input[type='time']:not(.browser-default),
+input[type='date']:not(.browser-default),
+input[type='datetime']:not(.browser-default),
+input[type='datetime-local']:not(.browser-default),
+input[type='tel']:not(.browser-default),
+input[type='number']:not(.browser-default),
+input[type='search']:not(.browser-default),
+textarea.materialize-textarea:not(.browser-default) {
+    color: orange;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid orange;
+    -webkit-box-shadow: 0 1px 0 0 orange;
+    box-shadow: 0 1px 0 0 orange;
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: orange;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid orange !important;
+    border-bottom: 2px solid orange !important;
+}
+
+.btn {
+    margin: 2%;
+    background-color: rgb(72, 41, 10);
+    border: 1px solid black;
+}
+
+.btn:hover {
+    background-color: rgb(87, 62, 36);
+}
+
+.btn:focus {
+    background-color: gray;
+}
+
+select {
+    background-color: rgb(48, 8, 8);
+    color: white;
+    border-color: rgb(150, 150, 150);
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
+    background-color: orange !important;
+}
+
+[type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
+    border: 2px solid white !important;
+}
+
+[type="radio"]:checked + span:before, [type="radio"]:checked + span:after {
+    border: 2px solid white !important;
+}
+
+.tabs {
+    background-color: transparent !important;
+    border: 3px solid rgba(72, 41, 10);
+    border-radius: 10px;
+}
+
+.tabs .tab a {
+    color: orange !important;
+    text-decoration: none !important;
+    text-overflow: unset !important;
+    padding: 0 5px !important;
+}
+
+.tabs .tab a:hover {
+    background-color: orange !important;
+    color: white !important;
+}
+
+.tabs .tab a.active {
+    background-color: rgba(149, 90, 30, 0.8) !important;
+    color: white !important;
+}
+
+.tabs .indicator {
+    background-color: rgba(49, 35, 21, 0.8) !important;
+}
+
+.tooltipped:after {
+    content: "";
+    display: block;
+    border-bottom: 1px dotted rgb(159 37 37);
+    margin: auto;
+}
+
+.material-tooltip {
+    max-width: 300px;
+    background-color: rgb(21, 20, 20);
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.sidenav {
+    background-color: rgb(21, 20, 20) !important;
+}
+
+.sidenav li > a {
+    color: rgb(150, 150, 150) !important;
+}
+
+.sidenav li > a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modal {
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(150, 150, 150);
+    border: 3px solid rgb(48, 8, 8);
+}
+
+.modal .modal-footer {
+    background-color: black;
+    text-align: center;
+}
+
+.carousel .carousel-item > img {
+    width: auto;
+}
+
+.dropdown-content li:hover, .dropdown-content li.active {
+    background-color: orange;
+}
+
+.dropdown-content li {
+    text-align: center !important;
+}
+
+@media only screen and (min-width: 601px) {
+    nav .nav-wrapper em, nav a.sidenav-trigger em {
+        height: 64px;
+        line-height: 64px;
+    }
+}
+
+nav .sidenav-trigger em {
+    height: 56px;
+    line-height: 56px;
+}
+
+nav em, nav em.material-icons {
+    display: block;
+    font-size: 24px;
+    height: 56px;
+    line-height: 56px;
+}

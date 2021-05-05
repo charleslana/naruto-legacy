@@ -1,0 +1,87 @@
+<div class="navbar-fixed" id="nav-not-logged">
+    <nav>
+        <div class="nav-wrapper">
+            <a class='dropdown-trigger logo-translate' href='#' data-target='dropdown1'>
+                <img src="assets/img/languages/pt.png" alt="Language" id="icon-language" />
+            </a>
+            <ul id='dropdown1' class='dropdown-content col-p'>
+                <li id="language-portuguese"><img src="assets/img/languages/pt.png" alt="Portuguese" width="64px" height="64px" /></li>
+                <li id="language-english"><img src="assets/img/languages/en.png" alt="English" width="64px" height="64px" /></li>
+            </ul>
+            <ul class="right">
+                <li><a href="/home" class="click-action">Home</a></li>
+                <li><a href="/login" class="click-action">Login</a></li>
+                <li><a href="/register" class="click-action">Cadastrar-se</a></li>
+                <li><a href="#" id="go-to-page">Tester</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container top">
+    <img src="assets/img/layout/logo-legacy.png" alt="Logo" class="responsive-img" />
+</div>
+
+<main page-now="home"></main>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5>Naruto Legacy</h5>
+                <p>
+                    Jogar Naruto Legacy é totalmente
+                    gratuito e sem nenhum compromisso.
+                    Somos um fã site e os direitos autorais desta obra estão reservados ao criador da série
+                    japonesa.
+                    Todos os direitos sobre NARUTO são reservados a Masashi Kishimoto.
+                    Todo e qualquer lucro obtido neste site são usados na manutenção do site em despesas com
+                    servidores e programação do jogo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    © 2021 Copyright - Todos direitos reservados a Naruto Legacy by Charles fan made
+                    <br>
+                    © 2021 Copyright - Todos direitos do anime e imagens reservados a Masashi Kishimoto
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="modal-language" class="modal center">
+    <div class="container">
+        <div class="modal-content col-p">
+            <h4>Hello there!</h4>
+            <p>Choose your language</p>
+            <form id="form-change-language">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <label>
+                            <img src="assets/img/languages/pt.png" class="c-pointer" width="100px" height="100px" alt="Portuguese" />
+                            <div>
+                                <input class="with-gap" name="groupLanguage" type="radio" value="pt" required>
+                                <span></span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="col s12 m6">
+                        <label>
+                            <img src="assets/img/languages/en.png" class="c-pointer" width="100px" height="100px" alt="English" />
+                            <div>
+                                <input class="with-gap" name="groupLanguage" type="radio" value="en" required>
+                                <span></span>
+                            </div>
+                        </label>
+                    </div>
+                    <input type="submit" class="btn" value="Ok" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

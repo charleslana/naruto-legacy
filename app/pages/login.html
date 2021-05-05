@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col s3 hide-on-small-only">
+                <img src="../assets/img/layout/login-start.png" alt="Login" class="responsive-img" />
+            </div>
+            <div class="col s12 m6 center-align center col-p">
+                <h3 class="h3-p">Login</h3>
+                <form id="form-login" autocomplete="off">
+                    <div class="input-field">
+                        <input type="email" id="email" maxlength="50" required />
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" required />
+                        <label>Senha</label>
+                    </div>
+                    <p>
+                        <label>
+                            <input type="checkbox" id="save-login" />
+                            <span>Salvar login</span>
+                        </label>
+                    </p>
+                    <input type="submit" class="btn" value="Entrar" />
+                </form>
+                <p class="d-inline">Ainda não tem uma conta?</p> <a href="/register" class="click-action">Registre-se.</a>
+            </div>
+            <div class="col s3 hide-on-small-only">
+                <img src="../assets/img/layout/login-end.png" alt="Login" class="responsive-img" />
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6">
+                <h3 class="h3-p">Ninjas Online</h3>
+                <table class="responsive-table col-p centered table-striped" aria-describedby="ninjas-online">
+                    <thead>
+                        <tr>
+                            <th id="ninjaStatus">Status</th>
+                            <th id="ninjaName">Nome</th>
+                            <th id="ninjaVillage">Vila</th>
+                            <th id="ninjaLevel">Level</th>
+                            <th id="ninjaScore">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ninjas-online"></tbody>
+                </table>
+            </div>
+            <div class="col s12 m6">
+                <h3 class="h3-p">Eventos Ativos</h3>
+                <table class="responsive-table col-p centered table-striped" aria-describedby="events-active">
+                    <thead>
+                        <tr>
+                            <th id="eventStatus">Status</th>
+                            <th id="eventName">Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events-active"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col s12 m9 center col-p col-align-center">
+                <h3 class="h3-p">Cadastro</h3>
+                <p>- Preencha os campos corretamente e utilize um email válido, deverá confirmar seu email após o
+                    cadastro para poder começar sua grande jornada no Naruto Legado.
+                </p>
+                <form id="form-register" autocomplete="off">
+                    <div class="input-field">
+                        <input type="text" id="name" maxlength="15" required />
+                        <label>Nome</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="email" maxlength="50" required />
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" required />
+                        <label>Senha</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="confirmPassword" required />
+                        <label>Confirmar senha</label>
+                    </div>
+                    <hr>
+                    <h5>Estilo ninja</h5>
+                    <p>- Aqui você escolhe seu estilo ninja de ser.</p>
+                    <p>Você ganhará um bônus de 5% no atributo de seu estilo.</p>
+                    <p>(3% para todos atributos caso escolha o estilo "Balanceado")</p>
+                    <div class="row">
+                        <div class="col m3">
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" value="1" required />
+                                <span>Taijutsu</span>
+                            </label>
+                        </div>
+                        <div class="col m3">
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" value="2" />
+                                <span>Ninjutsu</span>
+                            </label>
+                        </div>
+                        <div class="col m3">
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" value="3" />
+                                <span>Genjutsu</span>
+                            </label>
+                        </div>
+                        <div class="col m3">
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" value="4" />
+                                <span>Balanceado</span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Personagem</h5>
+                    <p>Escolha um personagem</p>
+                    <div class="carousel" id="characters"></div>
+                    <hr>
+                    <h5>Vila inicial</h5>
+                    <p>- E aqui você escolhe sua vila inicial, onde poderá participar de clãs e rankings da vila.</p>
+                    <div class="row" id="villages"></div>
+                    <input type="submit" class="btn" value="Cadastrar" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

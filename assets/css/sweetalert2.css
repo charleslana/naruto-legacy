@@ -1,0 +1,19 @@
+.swal2-styled.swal2-confirm {
+    background-color: orange !important;
+}
+
+.swal2-popup {
+    background-color: rgb(48, 8, 8) !important;
+}
+
+.swal2-content {
+    color: orange !important;
+}
+
+.swal2-title {
+    color: orange !important;
+}
+
+.swal2-styled:focus {
+    box-shadow: none !important;
+}

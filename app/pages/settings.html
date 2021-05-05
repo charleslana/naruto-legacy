@@ -1,0 +1,150 @@
+<div class="content no-margin-top">
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#test1">Perfil</a></li>
+                <li class="tab col s3"><a href="#test2">Avatar</a></li>
+                <li class="tab col s3"><a href="#test3">Personagem</a></li>
+                <li class="tab col s3"><a href="#test4">Mural</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="test1" class="col s12">
+        <h4>Sons</h4>
+        <button type="button" class="btn">Desabilitar sons do jogo</button>
+        <hr>
+
+        <h4>Alterar senha</h4>
+        <form id="form-change-password" autocomplete="off">
+            <div class="input-field">
+                <input type="password" id="currentPassword" required />
+                <label>Senha atual</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="newPassword" required />
+                <label>Nova senha</label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="confirmNewPassword" required />
+                <label>Confirme a nova senha</label>
+            </div>
+            <input type="submit" class="btn" value="Trocar senha" />
+        </form>
+        <hr>
+
+        <h4>Alterar nome <img src="assets/img/icons/credits.png" alt="Credits"> 5</h4>
+        <form id="form-change-name" autocomplete="off">
+            <div class="input-field">
+                <input type="text" id="newName" maxlength="15" required />
+                <label>Novo nome</label>
+            </div>
+            <input type="submit" class="btn" value="Trocar nome" />
+        </form>
+        <hr>
+
+        <h4>Meu email</h4>
+        <div class="input-field">
+            <input type="email" id="myEmail" value="meu@email.com" disabled />
+            <label class="c-white">Email</label>
+        </div>
+        <hr>
+
+        <h4>Alterar estilo ninja <img src="assets/img/icons/credits.png" alt="Credits"> 5</h4>
+        <form id="form-change-ninja-style" autocomplete="off">
+            <div class="row">
+                <div class="col m3">
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" value="1" required />
+                        <span>Taijutsu</span>
+                    </label>
+                </div>
+                <div class="col m3">
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" value="2" />
+                        <span>Ninjutsu</span>
+                    </label>
+                </div>
+                <div class="col m3">
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" value="3" />
+                        <span>Genjutsu</span>
+                    </label>
+                </div>
+                <div class="col m3">
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" value="4" />
+                        <span>Balanceado</span>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" class="btn" value="Trocar estilo" />
+        </form>
+        <hr>
+
+        <h4>Alterar vila <img src="assets/img/icons/credits.png" alt="Credits"> 10</h4>
+        <p>O usuário não deve estar participando de nenhum clã.</p>
+        <form id="form-change-village" autocomplete="off">
+            <div class="row" id="villages"></div>
+            <input type="submit" class="btn" value="Trocar vila" />
+        </form>
+        <hr>
+        <h4>Alterar idioma</h4>
+        <div class="row">
+            <div class="col s12 m6">
+                <label id="language-portuguese">
+                    <img src="assets/img/languages/pt.png" class="c-pointer" width="100px" height="100px"
+                        alt="Portuguese" />
+                    <div>
+                        <input class="with-gap" name="groupLanguage" type="radio" value="pt" required>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+            <div class="col s12 m6">
+                <label id="language-english">
+                    <img src="assets/img/languages/en.png" class="c-pointer" width="100px" height="100px"
+                        alt="English" />
+                    <div>
+                        <input class="with-gap" name="groupLanguage" type="radio" value="en" required>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="test2" class="col s12">
+        <p>3 avatares para escolher (5 para premium)</p>
+        <form id="form-change-avatar">
+            <div class="row" id="change-avatar"></div>
+            <input type="submit" class="btn" value="Salvar" />
+        </form>
+    </div>
+    <div id="test3" class="col s12">
+        <p>Troca somente para conta premium.</p>
+        <form id="form-change-character">
+            <div class="row" id="change-character"></div>
+        </form>
+    </div>
+    <div id="test4" class="col s12">
+        <h4>Mural do perfil</h4>
+        <p>-> Aqui você pode editar o mural do seu perfil para todos verem.</p>
+        <p>-> Utilize tags como: [b]Teste[b] ou [img]linkDaImagem[/img] e até [center]texto[/center].</p>
+        <p>-> Exemplo: <strong class="c-red"><em>Teste</em></strong> se escreve assim:
+            [color=red][b][i]Teste[/i][/b][/color]</p>
+        <p>Tags:</p>
+        <p>[b]texto aqui[/b] -> Deixa o texto em negrito</p>
+        <p>[i]texto aqui[/i] -> Deixa o texto em itálico</p>
+        <p>[u]texto aqui[/u] -> Deixa o texto sublinhado</p>
+        <p>[size=tamanho da fonte aqui]texto[/size] -> Aumenta ou diminui o tamanho do texto/fonte</p>
+        <p>[color=cor da fonte em inglês aqui]texto[/color] -> Muda a cor do texto</p>
+        <p>[url]texto aqui[/url] -> Transforma o texto em url</p>
+        <p>[img]link da imagem[/img] -> Aparece a imagem</p>
+        <p>[center]qualquer coisa aqui[/center] -> Centraliza o texto ou tudo que estiver dentro</p>
+        <p>[enter] -> Para pular uma linha</p>
+        <form id="form-change-mural">
+            <textarea rows="7" id="mural"
+                required>[center][color=orange][b]Nenhuma informação no mural[/b][/color][/center]</textarea>
+            <input type="submit" class="btn" value="Salvar" />
+        </form>
+    </div>
+</div>
