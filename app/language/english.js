@@ -35,6 +35,16 @@ const translateEnglish = {
     "LOGIN_ACTIVE_EVENTS_TABLE_A": "Status",
     "LOGIN_ACTIVE_EVENTS_TABLE_B": "Name",
     "LOGIN_ACTIVE_EVENTS_DATA": "Boss Invasion",
+    "REGISTER_TITLE": "Register",
+    "REGISTER_DESCRIPTION": "Fill in the fields correctly and use a valid email, you must confirm your email after registration to be able to start your great journey in Naruto Legacy.",
+    "REGISTER_NAME": "Name",
+    "REGISTER_EMAIL": "Email",
+    "REGISTER_PASSWORD": "Password",
+    "REGISTER_CONFIRM_PASSWORD": "Confirm password",
+    "REGISTER_FORM_STYLE_NINJA": "Ninja Style",
+    "REGISTER_FORM_STYLE_NINJA_DETAILS_A": "Here you choose your ninja style to be.",
+    "REGISTER_FORM_STYLE_NINJA_DETAILS_B": "You will earn a 5% bonus on your style attribute.",
+    "REGISTER_FORM_STYLE_NINJA_DETAILS_C": "(3% for all attributes if you choose the Balanced style)",
 }
 
 export default translateEnglish;

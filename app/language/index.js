@@ -42,6 +42,7 @@ export const language = () => {
     notLogged(translate);
     home(translate);
     login(translate);
+    register(translate);
 }
 
 const modalTranslate = (getTranslations) => {
@@ -241,5 +242,59 @@ const login = (translate) => {
     element = document.getElementById('eventName');
     if (element) {
         element.innerText = translate.LOGIN_ACTIVE_EVENTS_TABLE_B;
+    }
+}
+
+const register = (translate) => {
+    let element;
+
+    element = document.querySelector('main[page-now="register"] h3');
+    if (element) {
+        element.innerText = translate.REGISTER_TITLE;
+    }
+
+    element = document.querySelector('main[page-now="register"] p');
+    if (element) {
+        element.innerText = translate.REGISTER_DESCRIPTION;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register .input-field:nth-child(1) > label');
+    if (element) {
+        element.innerText = translate.REGISTER_NAME;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register .input-field:nth-child(2) > label');
+    if (element) {
+        element.innerText = translate.REGISTER_EMAIL;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register .input-field:nth-child(3) > label');
+    if (element) {
+        element.innerText = translate.REGISTER_PASSWORD;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register .input-field:nth-child(4) > label');
+    if (element) {
+        element.innerText = translate.REGISTER_CONFIRM_PASSWORD;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register h5');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_STYLE_NINJA;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register p');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_STYLE_NINJA_DETAILS_A;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register p:nth-child(8)');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_STYLE_NINJA_DETAILS_B;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register p:nth-child(9)');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_STYLE_NINJA_DETAILS_C;
     }
 }
