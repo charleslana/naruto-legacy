@@ -34,6 +34,7 @@ const translateEnglish = {
     "LOGIN_ACTIVE_EVENTS": "Active Events",
     "LOGIN_ACTIVE_EVENTS_TABLE_A": "Status",
     "LOGIN_ACTIVE_EVENTS_TABLE_B": "Name",
+    "LOGIN_ACTIVE_EVENTS_DATA": "Boss Invasion",
 }
 
 export default translateEnglish;
