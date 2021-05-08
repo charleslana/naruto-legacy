@@ -1,4 +1,5 @@
 const translateEnglish = {
+    "SERVER_MAINTENANCE": "Server under maintenance!",
     "NOTIFICATION_ERROR": "Error!",
     "NOTIFICATION_SUCCESS": "Success!",
     "BUTTON_WAIT": "Wait",

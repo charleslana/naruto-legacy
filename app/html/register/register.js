@@ -3,6 +3,7 @@ import villages from '../../static/villages.js';
 import config from '../../config/config.js';
 import { notificationError, notificationSuccess } from '../../components/notification.js';
 import loadPage from '../../events/loadPage.js';
+import { getLanguage } from '../../language/index.js';
 
 export const listCharacters = () => {
     const registerCharacters = document.getElementById('characters');
@@ -66,17 +67,20 @@ const signUp = () => {
     disableButton();
 
     fetch(config.apiBack + config.register, {
-        // method: 'post',
-        // body: JSON.stringify({
-        //     inputName,
-        //     inputEmail,
-        //     inputPassword,
-        //     radioStyleNinja,
-        //     radioCharacter,
-        //     radioVillage
-        // })
+        method: 'POST',
+        body: JSON.stringify({
+            inputName,
+            inputEmail,
+            inputPassword,
+            radioStyleNinja,
+            radioCharacter,
+            radioVillage
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

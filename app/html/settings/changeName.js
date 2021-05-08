@@ -3,6 +3,7 @@ import config from '../../config/config.js';
 import { toastSuccess } from '../../components/toast.js';
 import price from '../../static/prices.js';
 import { showUserData, getStorage, saveStorage } from '../storage/storage.js';
+import { getLanguage } from '../../language/index.js';
 
 const addChangeNameSubmit = () => {
     const submit = document.getElementById('form-change-name');
@@ -39,12 +40,15 @@ const changeName = () => {
     disableButton();
 
     fetch(config.apiBack + config.changeName, {
-        // method: 'patch',
-        // body: JSON.stringify({
-        //     newName
-        // })
+        method: 'PATCH',
+        body: JSON.stringify({
+            name: newName
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

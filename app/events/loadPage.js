@@ -1,7 +1,5 @@
 import config from '../config/config.js';
 import click from './click.js';
-import ninjasOnline from '../html/login/ninjasOnline.js';
-import eventsActive from '../html/login/eventsActive.js';
 import { addEvent, preEvent } from './addEvent.js';
 import { sidenav } from '../components/sidenav.js';
 import tab from '../components/tab.js';
@@ -36,7 +34,6 @@ const loadPageMain = (page) => {
             tooltip();
             dropdown();
             click(loadPageMain);
-            fetchPageContent(page);
             addEvent(loadPage);
         })
         .catch(error => {
@@ -58,13 +55,6 @@ const preloaderMain = () => {
         </div>
     </div>
     `;
-}
-
-const fetchPageContent = (page) => {
-    if (page === 'login') {
-        ninjasOnline();
-        eventsActive();
-    }
 }
 
 const notFound = () => {

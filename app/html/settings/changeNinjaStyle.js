@@ -3,6 +3,7 @@ import config from '../../config/config.js';
 import { toastSuccess } from '../../components/toast.js';
 import price from '../../static/prices.js';
 import { showUserData, getStorage, saveStorage } from '../storage/storage.js';
+import { getLanguage } from '../../language/index.js';
 
 export const showNinjaStyle = () => {
     const ninjaStyle = document.querySelector(`input[name="group1"][value="${getStorage('styleNinja')}"]`);
@@ -44,12 +45,15 @@ const changeNinjaStyle = () => {
     disableButton();
 
     fetch(config.apiBack + config.changeNinjaStyle, {
-        // method: 'patch',
-        // body: JSON.stringify({
-        //     radioStyleNinja
-        // })
+        method: 'PATCH',
+        body: JSON.stringify({
+            ninjaStyle: radioStyleNinja
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

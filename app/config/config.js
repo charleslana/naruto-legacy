@@ -4,15 +4,15 @@ const config = {
     pages: '/app/pages/',
     loginOnline: '/login/online',
     loginEvents: '/login/events',
-    login: '/mock/login.json',
-    register: '/mock/register.json',
-    changePassword: '/mock/change-password.json',
-    changeName: '/mock/change-name.json',
-    changeNinjaStyle: '/mock/change-ninja-style.json',
-    changeVillage: '/mock/change-village.json',
-    changeAvatar: '/mock/change-avatar.json',
-    changeCharacter: '/mock/change-character.json',
-    changeMural: '/mock/change-mural.json'
+    login: '/login',
+    register: '/register',
+    changePassword: '/user/change-password',
+    changeName: '/user/change-name',
+    changeNinjaStyle: '/user/change-ninja-style',
+    changeVillage: '/user/change-village',
+    changeAvatar: '/user/change-avatar',
+    changeCharacter: '/user/change-character',
+    changeMural: '/user/change-mural'
 }
 
 export default config;

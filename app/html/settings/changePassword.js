@@ -1,6 +1,7 @@
 import { notificationError } from '../../components/notification.js';
 import config from '../../config/config.js';
 import { toastSuccess } from '../../components/toast.js';
+import { getLanguage } from '../../language/index.js';
 
 const addChangePasswordSubmit = () => {
     const submit = document.getElementById('form-change-password');
@@ -28,13 +29,16 @@ const changePassword = () => {
     disableButton();
 
     fetch(config.apiBack + config.changePassword, {
-        // method: 'patch',
-        // body: JSON.stringify({
-        //     currentPassword,
-        //     newPassword
-        // })
+        method: 'PATCH',
+        body: JSON.stringify({
+            currentPassword,
+            newPassword
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

@@ -1,6 +1,6 @@
 import config from '../../config/config.js';
 import { notificationError } from '../../components/notification.js';
-import { getLanguage } from '../../language/index.js';
+import { getLanguage as translate } from '../../language/index.js';
 
 const eventsActive = () => {
     const checkEventsActive = document.getElementById('events-active');
@@ -10,19 +10,20 @@ const eventsActive = () => {
 
         fetch(config.apiBack + config.loginEvents)
             .then(response => {
+                if (!response.ok) {
+                    throw new Error(`${translate().SERVER_MAINTENANCE} ${response.statusText}`);
+                }
                 return response.json();
             })
             .then(data => {
                 if (data.success) {
-                    const translate = getLanguage();
-
                     let events = '';
 
                     data.events.map(event => {
                         events += `
                             <tr>
                                 <td><img src="../assets/img/icons/online.png" alt="Status"></td>
-                                <td>${translate[event.name]}</td>
+                                <td>${translate()[event.name]}</td>
                             </tr>
                         `;
                     });

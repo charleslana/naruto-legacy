@@ -1,4 +1,5 @@
 const translatePortuguese = {
+    "SERVER_MAINTENANCE": "Servidor em manutenção!",
     "NOTIFICATION_ERROR": "Erro!",
     "NOTIFICATION_SUCCESS": "Sucesso!",
     "BUTTON_WAIT": "Aguarde",

@@ -1,4 +1,4 @@
-import { formatYens, formatCredits } from '../../functions/functions.js';
+import { formatYens, formatNumber } from '../../functions/functions.js';
 
 export const getStorage = (variable) => {
     return localStorage.getItem(variable);
@@ -129,7 +129,7 @@ export const showUserData = () => {
             });
 
             detailsCredits.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/credits.png" alt="Credits" />: ${formatCredits(credits)}`;
+                detail.innerHTML = `<img src="assets/img/icons/credits.png" alt="Credits" />: ${formatNumber(credits)}`;
             });
 
             menuAvatar.map(menu => {

@@ -4,6 +4,7 @@ import config from '../../config/config.js';
 import { toastSuccess } from '../../components/toast.js';
 import { notificationError } from '../../components/notification.js';
 import { showAvatar } from './changeAvatar.js';
+import { getLanguage } from '../../language/index.js';
 
 export const showCharacter = () => {
     const checkCharacter = document.getElementById('change-character');
@@ -57,12 +58,15 @@ const changeCharacter = () => {
     disableButton();
 
     fetch(config.apiBack + config.changeCharacter, {
-        // method: 'patch',
-        // body: JSON.stringify({
-        //     radioCharacter.value
-        // })
+        method: 'PATCH',
+        body: JSON.stringify({
+            character: radioCharacter.value
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

@@ -22,13 +22,16 @@ const doLogin = () => {
     disableButton(translate);
 
     fetch(config.apiBack + config.login, {
-        // method: 'post',
-        // body: JSON.stringify({
-        //     inputEmail,
-        //     inputPassword
-        // })
+        method: 'POST',
+        body: JSON.stringify({
+            inputEmail,
+            inputPassword
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

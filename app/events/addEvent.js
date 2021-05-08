@@ -1,3 +1,5 @@
+import ninjasOnline from '../html/login/ninjasOnline.js';
+import eventsActive from '../html/login/eventsActive.js';
 import { login, showLogin } from '../html/login/login.js';
 import carousel from '../components/carousel.js';
 import { listCharacters, listVillages, register } from '../html/register/register.js';
@@ -13,6 +15,8 @@ export const addEvent = (loadPage) => {
     addLanguageSubmit();
     language();
 
+    ninjasOnline();
+    eventsActive();
     login();
     showLogin();
 

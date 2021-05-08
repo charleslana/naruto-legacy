@@ -2,6 +2,7 @@ import { showUserData, getStorage, saveStorage } from '../storage/storage.js';
 import config from '../../config/config.js';
 import { toastSuccess } from '../../components/toast.js';
 import { notificationError } from '../../components/notification.js';
+import { getLanguage } from '../../language/index.js';
 
 export const showAvatar = () => {
     const avatar = document.getElementById('change-avatar');
@@ -56,12 +57,15 @@ const changeAvatar = () => {
     disableButton();
 
     fetch(config.apiBack + config.changeAvatar, {
-        // method: 'patch',
-        // body: JSON.stringify({
-        //     radioAvatar
-        // })
+        method: 'PATCH',
+        body: JSON.stringify({
+            avatar: radioAvatar
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

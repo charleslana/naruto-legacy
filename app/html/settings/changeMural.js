@@ -2,6 +2,7 @@ import { getStorage, saveStorage } from '../storage/storage.js';
 import config from '../../config/config.js';
 import { toastSuccess } from '../../components/toast.js';
 import { notificationError } from '../../components/notification.js';
+import { getLanguage } from '../../language/index.js';
 
 export const showMural = () => {
     const mural = document.getElementById('mural');
@@ -30,12 +31,15 @@ const changeMural = () => {
     disableButton();
 
     fetch(config.apiBack + config.changeMural, {
-        // method: 'patch',
-        // body: JSON.stringify({
-        //     mural
-        // })
+        method: 'PATCH',
+        body: JSON.stringify({
+            mural
+        })
     })
         .then(response => {
+            if (!response.ok) {
+                throw new Error(`${translate.SERVER_MAINTENANCE} ${response.statusText}`);
+            }
             return response.json();
         })
         .then(data => {

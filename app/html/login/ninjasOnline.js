@@ -1,5 +1,7 @@
 import config from '../../config/config.js';
 import { notificationError } from '../../components/notification.js';
+import { formatNumber } from '../../functions/functions.js';
+import { getLanguage as translate } from '../../language/index.js';
 
 const ninjasOnline = () => {
     const checkNinjasOnline = document.getElementById('ninjas-online');
@@ -9,6 +11,9 @@ const ninjasOnline = () => {
 
         fetch(config.apiBack + config.loginOnline)
             .then(response => {
+                if (!response.ok) {
+                    throw new Error(`${translate().SERVER_MAINTENANCE} ${response.statusText}`);
+                }
                 return response.json();
             })
             .then(data => {
@@ -22,7 +27,7 @@ const ninjasOnline = () => {
                                 <td>${user.clan} - ${user.name}</td>
                                 <td><img src="../assets/img/villages/${user.village}.png" width="40px" alt="Village"></td>
                                 <td>${user.level}</td>
-                                <td>${user.score}</td>
+                                <td>${formatNumber(user.score)}</td>
                             </tr>
                         `;
                     });
