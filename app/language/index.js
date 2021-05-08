@@ -27,7 +27,7 @@ export const getLanguage = () => {
 
 export const language = () => {
     const getTranslations = getStorage('language');
-    
+
     const iconLanguage = document.getElementById('icon-language');
     if (iconLanguage && getTranslations) {
         iconLanguage.src = `assets/img/languages/${getTranslations}.png`;
@@ -98,7 +98,7 @@ const notLogged = (translate) => {
 
 const footer = (translate) => {
     let element;
-    
+
     element = document.querySelector('footer p');
     if (element) {
         element.innerText = translate.FOOTER;
@@ -173,7 +173,7 @@ const login = (translate) => {
     if (element) {
         element.innerText = translate.LOGIN_EMAIL;
     }
-    
+
     element = document.querySelector('main[page-now="login"] #form-login .input-field:nth-child(2) > label');
     if (element) {
         element.innerText = translate.LOGIN_PASSWORD;
@@ -296,5 +296,35 @@ const register = (translate) => {
     element = document.querySelector('main[page-now="register"] #form-register p:nth-child(9)');
     if (element) {
         element.innerText = translate.REGISTER_FORM_STYLE_NINJA_DETAILS_C;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register div:nth-child(10) > div:nth-child(4) > label > span');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_STYLE_NINJA_BALANCED;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register h5:nth-child(12)');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_CHARACTER;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register p:nth-child(13)');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_CHARACTER_DETAILS_A;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register h5:nth-child(16)');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_VILLAGE;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register p:nth-child(17)');
+    if (element) {
+        element.innerText = translate.REGISTER_FORM_VILLAGE_DETAILS_A;
+    }
+
+    element = document.querySelector('main[page-now="register"] #form-register > input[type="submit"]');
+    if (element) {
+        element.value = translate.REGISTER_BUTTON;
     }
 }

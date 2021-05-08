@@ -1,51 +1,51 @@
 const villages = [
     {
-        name: 'Vila da areia',
+        name: 'VILLAGE_A',
         image: 1,
         value: 1
     },
     {
-        name: 'Vila da cachoeira',
+        name: 'VILLAGE_B',
         image: 2,
         value: 2
     },
     {
-        name: 'Vila da chuva',
+        name: 'VILLAGE_C',
         image: 3,
         value: 3
     },
     {
-        name: 'Vila da estrela',
+        name: 'VILLAGE_D',
         image: 4,
         value: 4
     },
     {
-        name: 'Vila da folha',
+        name: 'VILLAGE_E',
         image: 5,
         value: 5
     },
     {
-        name: 'Vila da grama',
+        name: 'VILLAGE_F',
         image: 6,
         value: 6
     },
     {
-        name: 'Vila da névoa',
+        name: 'VILLAGE_G',
         image: 7,
         value: 7
     },
     {
-        name: 'Vila da nuvem',
+        name: 'VILLAGE_H',
         image: 8,
         value: 8
     },
     {
-        name: 'Vila da pedra',
+        name: 'VILLAGE_I',
         image: 9,
         value: 9
     },
     {
-        name: 'Vila do som',
+        name: 'VILLAGE_J',
         image: 10,
         value: 10
     }

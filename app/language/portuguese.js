@@ -1,4 +1,14 @@
 const translatePortuguese = {
+    "VILLAGE_A": "Vila da areia",
+    "VILLAGE_B": "Vila da cachoeira",
+    "VILLAGE_C": "Vila da chuva",
+    "VILLAGE_D": "Vila da estrela",
+    "VILLAGE_E": "Vila da folha",
+    "VILLAGE_F": "Vila da grama",
+    "VILLAGE_G": "Vila da névoa",
+    "VILLAGE_H": "Vila da nuvem",
+    "VILLAGE_I": "Vila da pedra",
+    "VILLAGE_J": "Vila do som",
     "SERVER_MAINTENANCE": "Servidor em manutenção!",
     "NOTIFICATION_ERROR": "Erro!",
     "NOTIFICATION_SUCCESS": "Sucesso!",
@@ -47,6 +57,13 @@ const translatePortuguese = {
     "REGISTER_FORM_STYLE_NINJA_DETAILS_A": "Aqui você escolhe seu estilo ninja de ser.",
     "REGISTER_FORM_STYLE_NINJA_DETAILS_B": "Você ganhará um bônus de 5% no atributo de seu estilo.",
     "REGISTER_FORM_STYLE_NINJA_DETAILS_C": "(3% para todos atributos caso escolha o estilo Balanceado)",
+    "REGISTER_FORM_STYLE_NINJA_BALANCED": "Balanceado",
+    "REGISTER_FORM_CHARACTER": "Personagem",
+    "REGISTER_FORM_CHARACTER_DETAILS_A": "Escolha um personagem",
+    "REGISTER_FORM_VILLAGE": "Vila inicial",
+    "REGISTER_FORM_VILLAGE_DETAILS_A": "E aqui você escolhe sua vila inicial, onde poderá participar de clãs e rankings da vila.",
+    "REGISTER_BUTTON": "Cadastrar",
+    "REGISTER_SUCCESSFULLY": "Cadastro efetuado com sucesso, agora você pode fazer login em sua conta.",
 }
 
 export default translatePortuguese;

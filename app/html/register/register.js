@@ -30,9 +30,9 @@ export const listVillages = () => {
             labelVillages += `
                 <div class="col m3 col-padding">
                     <label>
-                        <img src="../assets//img/villages/${village.image}.png" alt="${village.name}" height="50px" class="c-pointer" />
+                        <img src="../assets//img/villages/${village.image}.png" alt="${getLanguage()[village.name]}" height="50px" class="c-pointer" />
                         <input class="with-gap" name="group3" type="radio" value="${village.value}" required />
-                        <span>${village.name}</span>
+                        <span>${getLanguage()[village.name]}</span>
                     </label>
                 </div>
             `;
@@ -59,22 +59,23 @@ const signUp = () => {
     const radioStyleNinja = document.querySelector('input[name="group1"]:checked').value;
     const radioCharacter = document.querySelector('input[name="group2"]:checked').value;
     const radioVillage = document.querySelector('input[name="group3"]:checked').value;
+    const translate = getLanguage();
 
     if (inputPassword !== inputConfirmPassword) {
         return notificationError('As senhas digitadas não coincidem.');
     }
 
-    disableButton();
+    disableButton(translate);
 
     fetch(config.apiBack + config.register, {
         method: 'POST',
         body: JSON.stringify({
-            inputName,
-            inputEmail,
-            inputPassword,
-            radioStyleNinja,
-            radioCharacter,
-            radioVillage
+            name: inputName,
+            email: inputEmail,
+            password: inputPassword,
+            styleNinja: radioStyleNinja,
+            character: radioCharacter,
+            village: radioVillage
         })
     })
         .then(response => {
@@ -87,28 +88,28 @@ const signUp = () => {
             if (data.success) {
                 document.getElementById('form-register').reset();
                 loadPage('login');
-                notificationSuccess(data.success.message);
+                notificationSuccess(translate[data.success.message]);
             }
 
             if (data.error) {
-                enableButton();
-                notificationError(data.error.message);
+                enableButton(translate);
+                notificationError(translate[data.error.message]);
             }
         })
         .catch(error => {
-            enableButton();
+            enableButton(translate);
             notificationError(error.message);
         });
 }
 
-const disableButton = () => {
+const disableButton = (translate) => {
     const submit = document.querySelector('#form-register input[type="submit"]');
-    submit.value = 'Aguarde';
+    submit.value = translate.BUTTON_WAIT;
     submit.setAttribute('disabled', true);
 }
 
-const enableButton = () => {
+const enableButton = (translate) => {
     const submit = document.querySelector('#form-register input[type="submit"]');
-    submit.value = 'Cadastrar';
+    submit.value = translate.REGISTER_BUTTON;
     submit.removeAttribute('disabled');
 }

@@ -1,4 +1,14 @@
 const translateEnglish = {
+    "VILLAGE_A": "Sand village",
+    "VILLAGE_B": "Waterfall village",
+    "VILLAGE_C": "Rain village",
+    "VILLAGE_D": "Star village",
+    "VILLAGE_E": "Leaf Village",
+    "VILLAGE_F": "Grass village",
+    "VILLAGE_G": "Mist village",
+    "VILLAGE_H": "Cloud Village",
+    "VILLAGE_I": "Stone village",
+    "VILLAGE_J": "Sound village",
     "SERVER_MAINTENANCE": "Server under maintenance!",
     "NOTIFICATION_ERROR": "Error!",
     "NOTIFICATION_SUCCESS": "Success!",
@@ -47,6 +57,13 @@ const translateEnglish = {
     "REGISTER_FORM_STYLE_NINJA_DETAILS_A": "Here you choose your ninja style to be.",
     "REGISTER_FORM_STYLE_NINJA_DETAILS_B": "You will earn a 5% bonus on your style attribute.",
     "REGISTER_FORM_STYLE_NINJA_DETAILS_C": "(3% for all attributes if you choose the Balanced style)",
+    "REGISTER_FORM_STYLE_NINJA_BALANCED": "Balanced",
+    "REGISTER_FORM_CHARACTER": "Character",
+    "REGISTER_FORM_CHARACTER_DETAILS_A": "Choose a character",
+    "REGISTER_FORM_VILLAGE": "Initial village",
+    "REGISTER_FORM_VILLAGE_DETAILS_A": "And here you choose your starting village, where you can participate in the village's clans and rankings.",
+    "REGISTER_BUTTON": "Sign up",
+    "REGISTER_SUCCESSFULLY": "Successful registration, you can now login to your account.",
 }
 
 export default translateEnglish;
