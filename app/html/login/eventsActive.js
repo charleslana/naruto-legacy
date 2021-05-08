@@ -1,20 +1,61 @@
+import config from '../../config/config.js';
+import { notificationError } from '../../components/notification.js';
 import { getLanguage } from '../../language/index.js';
 
 const eventsActive = () => {
     const checkEventsActive = document.getElementById('events-active');
     if (checkEventsActive) {
-        const translate = getLanguage();
-        let events = '';
-        [1, 2].forEach(event => {
-            events += `
-                <tr>
-                    <td><img src="../assets/img/icons/online.png" alt="Status"></td>
-                    <td>${translate.LOGIN_ACTIVE_EVENTS_DATA}</td>
-                </tr>
-            `;
-        });
-        checkEventsActive.innerHTML = events;
+
+        loading(checkEventsActive);
+
+        fetch(config.apiBack + config.loginEvents)
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    const translate = getLanguage();
+
+                    let events = '';
+
+                    data.events.map(event => {
+                        events += `
+                            <tr>
+                                <td><img src="../assets/img/icons/online.png" alt="Status"></td>
+                                <td>${translate[event.name]}</td>
+                            </tr>
+                        `;
+                    });
+
+                    checkEventsActive.innerHTML = events;
+                }
+
+                if (data.error) {
+                    notificationError(translate[data.error.message]);
+                }
+            })
+            .catch(error => {
+                notificationError(error.message);
+            });
     }
+}
+
+const loading = (element) => {
+    element.innerHTML = `
+    <td colspan="2">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                    <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </td>
+    `;
 }
 
 export default eventsActive;

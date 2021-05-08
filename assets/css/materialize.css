@@ -198,3 +198,9 @@ nav em, nav em.material-icons {
     height: 56px;
     line-height: 56px;
 }
+
+@media only screen and (max-width: 992px) {
+    table.responsive-table tbody {
+        overflow: hidden;
+    }
+}
