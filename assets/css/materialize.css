@@ -201,6 +201,6 @@ nav em, nav em.material-icons {
 
 @media only screen and (max-width: 992px) {
     table.responsive-table tbody {
-        overflow: hidden;
+        overflow-y: hidden;
     }
 }
