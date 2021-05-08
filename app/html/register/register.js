@@ -30,7 +30,7 @@ export const listVillages = () => {
             labelVillages += `
                 <div class="col m3 col-padding">
                     <label>
-                        <img src="../assets//img/villages/${village.image}.png" alt="${getLanguage()[village.name]}" height="50px" class="c-pointer" />
+                        <img src="../assets/img/villages/${village.image}.png" alt="${getLanguage()[village.name]}" height="50px" class="c-pointer" />
                         <input class="with-gap" name="group3" type="radio" value="${village.value}" required />
                         <span>${getLanguage()[village.name]}</span>
                     </label>
