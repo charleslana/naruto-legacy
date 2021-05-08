@@ -48,7 +48,7 @@ const translatePortuguese = {
     "LOGIN_ACTIVE_EVENTS_DATA_BOSS": "Invasão do Boss",
     "LOGIN_ACTIVE_EVENTS_DATA_ZETSU": "Invasão do Zetsu",
     "REGISTER_TITLE": "Cadastro",
-    "REGISTER_DESCRIPTION": "Preencha os campos corretamente e utilize um email válido, deverá confirmar seu email após o cadastro para poder começar sua grande jornada no Naruto Legacy.",
+    "REGISTER_DESCRIPTION": "Preencha os campos corretamente e utilize um email válido, ao concluir o cadastro voce será redirecionado para realizar o login e iniciar sua grande jornada no Naruto Legacy.",
     "REGISTER_NAME": "Nome",
     "REGISTER_EMAIL": "E-mail",
     "REGISTER_PASSWORD": "Senha",

@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px) {
     .top img {
         object-fit: cover;
-        object-position: 86%;
+        object-position: 86% !important;
     }
 }
