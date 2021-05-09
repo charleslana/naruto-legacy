@@ -64,6 +64,8 @@ const translateEnglish = {
     "REGISTER_FORM_VILLAGE_DETAILS_A": "And here you choose your starting village, where you can participate in the village's clans and rankings.",
     "REGISTER_BUTTON": "Sign up",
     "REGISTER_SUCCESSFULLY": "Successful registration, you can now login to your account.",
+    "LOGGED_NAV_A": "Logout",
+    "LOGGED_NAV_TOOLTIP_A": "Level",
 }
 
 export default translateEnglish;

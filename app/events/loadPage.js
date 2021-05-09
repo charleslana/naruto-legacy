@@ -9,10 +9,10 @@ import dropdown from '../components/dropdown.js';
 const loadPage = (page = 'home') => {
 
     if (page === 'home' || page === 'login' || page === 'register') {
-        return loadPageSector('not-logged', page);
+        return loadPageSection('not-logged', page);
     }
 
-    loadPageSector('logged', page);
+    loadPageSection('logged', page);
 }
 
 const loadPageMain = (page) => {
@@ -75,19 +75,19 @@ const notFound = () => {
     `;
 }
 
-const loadPageSector = (sectorPage, page) => {
-    preloaderSector();
-    const sector = document.querySelector('sector');
+const loadPageSection = (sectionPage, page) => {
+    preloaderSection();
+    const section = document.querySelector('section');
 
-    fetch(`${config.apiFront}/${sectorPage}.html`)
+    fetch(`${config.apiFront}/${sectionPage}.html`)
         .then(response => {
             if (!response.ok) {
-                return sector.innerHTML = notFound();
+                return section.innerHTML = notFound();
             }
             return response.text();
         })
         .then(data => {
-            sector.innerHTML = data;
+            section.innerHTML = data;
             click(loadPageMain);
             sidenav();
             loadPageMain(page);
@@ -97,8 +97,8 @@ const loadPageSector = (sectorPage, page) => {
         });
 }
 
-const preloaderSector = () => {
-    document.querySelector('sector').innerHTML = `
+const preloaderSection = () => {
+    document.querySelector('section').innerHTML = `
     <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
             <div class="circle-clipper left">

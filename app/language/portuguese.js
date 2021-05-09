@@ -64,6 +64,8 @@ const translatePortuguese = {
     "REGISTER_FORM_VILLAGE_DETAILS_A": "E aqui você escolhe sua vila inicial, onde poderá participar de clãs e rankings da vila.",
     "REGISTER_BUTTON": "Cadastrar",
     "REGISTER_SUCCESSFULLY": "Cadastro efetuado com sucesso, agora você pode fazer login em sua conta.",
+    "LOGGED_NAV_A": "Sair",
+    "LOGGED_NAV_TOOLTIP_A": "Nível",
 }
 
 export default translatePortuguese;

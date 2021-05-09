@@ -43,6 +43,7 @@ export const language = () => {
     home(translate);
     login(translate);
     register(translate);
+    logged(translate);
 }
 
 const modalTranslate = (getTranslations) => {
@@ -326,5 +327,23 @@ const register = (translate) => {
     element = document.querySelector('main[page-now="register"] #form-register > input[type="submit"]');
     if (element) {
         element.value = translate.REGISTER_BUTTON;
+    }
+}
+
+const logged = (translate) => {
+    let elements;
+
+    elements = [].slice.call(document.querySelectorAll('.nav-details > li:nth-child(10) > a'));
+    if (elements) {
+        elements.map((element) => {
+            element.innerText = translate.LOGGED_NAV_A;
+        });
+    }
+
+    elements = [].slice.call(document.querySelectorAll('.nav-details > li:nth-child(2)'));
+    if (elements) {
+        elements.map((element) => {
+            element.setAttribute('data-tooltip', translate.LOGGED_NAV_TOOLTIP_A);
+        });
     }
 }
