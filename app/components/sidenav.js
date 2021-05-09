@@ -34,7 +34,7 @@ const sidenavChat = () => {
 export const closeDetailsSidenav = () => {
     const elementsDetails = document.querySelector('.sidenav-details');
     if (elementsDetails) {
-        const instanceDetails = M.Sidenav.init(elementsDetails);
+        const instanceDetails = M.Sidenav.getInstance(elementsDetails);
         instanceDetails.close();
     }
 }
@@ -42,7 +42,7 @@ export const closeDetailsSidenav = () => {
 export const closeMenuSidenav = () => {
     const elementsMenu = document.querySelector('.sidenav-menu');
     if (elementsMenu) {
-        const instanceMenu = M.Sidenav.init(elementsMenu);
+        const instanceMenu = M.Sidenav.getInstance(elementsMenu);
         instanceMenu.close();
     }
 }
