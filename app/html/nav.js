@@ -3,14 +3,14 @@ import { randomString } from '../functions/functions.js';
 export const navDetails = () => {
     const print = `
         <li><span class="details-name">teste1</span></li>
-        <li><span class="details-level">Level: 1</span></li>
-        <li><span class="details-experience"><img src="assets/img/icons/xp.png" alt="Experience" />: 1/100</span></li>
-        <li><span class="details-life"><img src="assets/img/icons/hp.png" alt="Life" />: 100/100</span></li>
-        <li><span class="details-chakra"><img src="assets/img/icons/chakra.png" alt="Chakra" />: 100/100</span></li>
-        <li><span class="details-ying"><img src="assets/img/icons/ying.png" alt="Ying" />: 30/30</span></li>
-        <li><span class="details-yang"><img src="assets/img/icons/yang.png" alt="Yang" />: 29/30</span></li>
-        <li><span class="details-yens"><img src="assets/img/icons/yens.png" alt="Yens" />: 0,00</span></li>
-        <li><span class="details-credits"><img src="assets/img/icons/credits.png" alt="Credits" />: 0</span></li>
+        <li class="tooltipped" data-position="bottom" data-tooltip="Level"><span class="details-level"><img src="assets/img/icons/level.png" alt="Level" /> 1</span></li>
+        <li><span class="details-experience"><img src="assets/img/icons/xp.png" alt="Experience" /> 1/100</span></li>
+        <li><span class="details-life"><img src="assets/img/icons/hp.png" alt="Life" /> 100/100</span></li>
+        <li><span class="details-chakra"><img src="assets/img/icons/chakra.png" alt="Chakra" /> 100/100</span></li>
+        <li><span class="details-ying"><img src="assets/img/icons/ying.png" alt="Ying" /> 30/30</span></li>
+        <li><span class="details-yang"><img src="assets/img/icons/yang.png" alt="Yang" /> 29/30</span></li>
+        <li><span class="details-yens"><img src="assets/img/icons/yens.png" alt="Yens" /> 0,00</span></li>
+        <li><span class="details-credits"><img src="assets/img/icons/credits.png" alt="Credits" /> 0</span></li>
         <li><a href="/logout" class="click-logout">Sair</a></li>    
     `;
     const searchNav = [].slice.call(document.querySelectorAll('.nav-details'));

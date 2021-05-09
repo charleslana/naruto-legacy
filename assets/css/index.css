@@ -246,14 +246,6 @@ ul span img {
     content:"";
 }
 
-.nav-menu .tooltipped {
-    display: inline-block;
-}
-
-.nav-menu .tooltipped:after {
-    width: 30px;
-}
-
 .daily-completed {
     background-color: rgb(72, 41, 10) !important;
 }

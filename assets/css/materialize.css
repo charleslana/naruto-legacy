@@ -130,13 +130,6 @@ hr {
     background-color: rgba(49, 35, 21, 0.8) !important;
 }
 
-.tooltipped:after {
-    content: "";
-    display: block;
-    border-bottom: 1px dotted rgb(159 37 37);
-    margin: auto;
-}
-
 .material-tooltip {
     max-width: 300px;
     background-color: rgb(21, 20, 20);

@@ -101,35 +101,35 @@ export const showUserData = () => {
             });
 
             detailsLevel.map(detail => {
-                detail.innerHTML = `Level: ${level}`;
+                detail.innerHTML = `<img src="assets/img/icons/level.png" alt="Level" /> ${level}`;
             });
 
             detailsExperience.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/xp.png" alt="Experience" />: ${minExperience}/${maxExperience}`;
+                detail.innerHTML = `<img src="assets/img/icons/xp.png" alt="Experience" /> ${minExperience}/${maxExperience}`;
             });
 
             detailsLife.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/hp.png" alt="Life" />: ${minLife}/${maxLife}`;
+                detail.innerHTML = `<img src="assets/img/icons/hp.png" alt="Life" /> ${minLife}/${maxLife}`;
             });
 
             detailsChakra.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/chakra.png" alt="Chakra" />: ${minChakra}/${maxChakra}`;
+                detail.innerHTML = `<img src="assets/img/icons/chakra.png" alt="Chakra" /> ${minChakra}/${maxChakra}`;
             });
 
             detailsYing.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/ying.png" alt="Ying" />: ${minYing}/${maxYing}`;
+                detail.innerHTML = `<img src="assets/img/icons/ying.png" alt="Ying" /> ${minYing}/${maxYing}`;
             });
 
             detailsYang.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/yang.png" alt="Yang" />: ${minYang}/${maxYang}`;
+                detail.innerHTML = `<img src="assets/img/icons/yang.png" alt="Yang" /> ${minYang}/${maxYang}`;
             });
 
             detailsYens.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/yens.png" alt="Yens" />: ${formatYens(yens)}`;
+                detail.innerHTML = `<img src="assets/img/icons/yens.png" alt="Yens" /> ${formatYens(yens)}`;
             });
 
             detailsCredits.map(detail => {
-                detail.innerHTML = `<img src="assets/img/icons/credits.png" alt="Credits" />: ${formatNumber(credits)}`;
+                detail.innerHTML = `<img src="assets/img/icons/credits.png" alt="Credits" /> ${formatNumber(credits)}`;
             });
 
             menuAvatar.map(menu => {
